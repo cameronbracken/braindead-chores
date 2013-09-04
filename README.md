@@ -9,7 +9,14 @@ A Flask app for searching music review data.
     - This app uses a cutomized bootstrap theme and tablesorter options
 3. Add a file in the root directory called config.py containing the following variable definitions
 
-: 
+## Python Packages
+Need to install the following python libraries with pip (They each have a few dependencies):
+
+- Flask
+- Flask-WTF
+- Flask-Security
+- Flask-Mako
+- Flask-SQLAlchemy
 
     CSRF_ENABLED = True
     SECRET_KEY = 'key'

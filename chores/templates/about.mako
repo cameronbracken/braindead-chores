@@ -10,7 +10,7 @@ This website will allow you to quickly search through Pitchfork review data and 
         <li><a href="http://pythonhosted.org/Flask-Mako/">Flask-Mako</a> Flask extension enabling Mako as the templating engine (I like it better than Jinja)</li>
         <li><a href="http://wtforms.simplecodes.com/docs/1.0.4/">WTForms</a> Python library for handling webforms</li>
         <li><a href="http://flask.pocoo.org/docs/patterns/wtforms/">Flask-WTForms</a> Flask extension for WTForms</li>
-        <li><a href="http://tablesorter.com/docs/">Tablesorter</a> Javascript library for the interactive table sorting (go figure)</li>
+        <li><a href="">Flask-Security</a> Handles all the user authentication and password recovery stuff. Pulls together many other Flask extensions.</li>
         <li><a href="http://twitter.github.io/bootstrap/">Twitter Bootstrap</a> Website layout and styles</li>
     </ul>
 </p>

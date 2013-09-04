@@ -1,11 +1,8 @@
 from flask import url_for, redirect, request, flash
 #use mako instead of jinja2 (its less ugly)
-from flask.ext.mako import MakoTemplates, render_template
+from flask.ext.mako import render_template
 from flask.ext import login
-from flask.ext.sqlalchemy import SQLAlchemy
-from wtforms.validators import ValidationError
-from flask.ext.mail import Mail
-from flask.ext.security.decorators import login_required
+import flask.ext.security as security
 
 from . import app, db, login_manager
 from forms import * 
@@ -20,8 +17,10 @@ def load_user(user_id):
 
 # Flask views
 @app.route('/', methods=('GET', 'POST'))
-@login_required
 def index():
-    return render_template('chores.html', user=login.current_user)
+    if security.current_user.is_authenticated(): 
+        return render_template('chores.mako', security=security)
+    else:
+        return render_template('welcome.mako', security=security)
 
 

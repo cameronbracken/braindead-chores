@@ -1,8 +1,6 @@
-<%inherit file="layout.html"/>
-
 <%block name="content">
 
-<p>${user.email}</p>
+<p>${security.current_user.email}</p>
 
 <p><a href='${url_for_security("logout")}'>Logout</a></p>
 

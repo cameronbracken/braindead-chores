@@ -1,5 +1,5 @@
-<%inherit file="layout.html"/>
-<%namespace file="macros.html" import="*"/>
+<%inherit file="layout.mako"/>
+<%namespace file="macros.mako" import="*"/>
 
 <%block name="content">
 
