@@ -1,0 +1,5 @@
+config.*
+*.pyc
+.DS_Store
+chores/static/bootstrap/*
+chores/static/tablesorter/*
