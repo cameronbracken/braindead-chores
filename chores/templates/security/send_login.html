@@ -1,5 +1,5 @@
-<%inherit file="../layout.mako"/>
-<%namespace file="../macros.mako" import="*"/>
+<%inherit file="../layout.html"/>
+<%namespace file="../macros.html" import="*"/>
 
 <%block name="content">
 
@@ -10,5 +10,5 @@ ${ render_errors(send_login_form.errors) }
   ${ render_form(send_login_form) }
 </form>
 
-<%include file="_menu.mako"/>
+<%include file="_menu.html"/>
 </%block>

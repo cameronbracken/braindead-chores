@@ -20,9 +20,9 @@ app.template_folder = "templates"
 mako = MakoTemplates(app)
 
 db = SQLAlchemy(app)
-login_manager = LoginManager(app)
+login = LoginManager(app)
 
-login_manager.login_view = 'login'
+login.login_view = 'login'
 
 # mail setup 
 mail = Mail(app)

@@ -1,6 +1,6 @@
 <%def name="bootstrap_alert_box(messages, alert_type)">
   % for message in messages:
-    <div class="alert alert-error">
+    <div class="alert alert-${alert_type}">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
       <strong>${message}</strong> 
     </div>
@@ -29,13 +29,13 @@
 <%def name="render_flashes()">
     <% messages = get_flashed_messages() %>
     % if messages:
-      ${ bootstrap_alert_box(messages, 'error') }
+      ${ bootstrap_alert_box(messages, 'info') }
     % endif
 </%def>
 
 <!-- Form validation errors (if any) -->
 <%def name="render_errors(errors)">
     % for error,messages in dict.iteritems(errors):
-      ${ bootstrap_alert_box(messages, 'info') }
+      ${ bootstrap_alert_box(messages, 'error') }
     % endfor
 </%def>
