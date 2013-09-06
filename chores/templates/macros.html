@@ -7,7 +7,8 @@
   %endfor
 </%def>
 
-<%def name="render_form(form)">
+<%def name="render_form(form, action)">
+<form action="${action}" method="POST" class='form form-horizontal'>
   ${ form.hidden_tag() if form.hidden_tag else ''}
     % for field in form:
       % if field.type != 'HiddenField' and field.type != 'CSRFTokenField':
@@ -23,6 +24,7 @@
         % endif
       % endif
     % endfor
+</form>
 </%def>
 
 <!-- Flashed messages (if any they will be errors) -->
@@ -38,4 +40,30 @@
     % for error,messages in dict.iteritems(errors):
       ${ bootstrap_alert_box(messages, 'error') }
     % endfor
+</%def>
+
+<%def name="household_overview(households)">
+% if len(households) > 0:
+    <p>Households you are a part of:</p>
+
+    % if not households is None:
+        <ul style='margin-left:40px;'>
+        % for household in households:
+            <li>
+              <strong>${ household.name }</strong> with magic word: <strong>${ household.magic_word }</strong>
+              <p> It has __ other housemates:</p>
+              <ul style='margin-left:40px;'> 
+                %for housemate in ['1','2']:
+                  <li>${housemate}</li>
+                %endfor
+              </ul>
+            </li>
+        % endfor 
+        </ul>
+    % endif
+%else:
+
+<p>You are'nt part of any households yet...</p>
+
+%endif 
 </%def>

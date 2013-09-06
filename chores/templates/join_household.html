@@ -1,0 +1,9 @@
+<%namespace file="macros.html" import="*"/>
+
+${ render_flashes() }
+
+${ household_overview(households)}
+
+<p>You can join an existing household (You have to know a name household name and magic word):</p>
+
+${ render_form(forms['join_household'], url_for('join_household')) }
